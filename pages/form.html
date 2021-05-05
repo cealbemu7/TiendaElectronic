@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Formulario de operaciones matemáticas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Formulario de operaciones matemáticas</h2>
+<a href="../index.html"> <p align=center> <img src="../imagenes/home.png" width="50" height="50" name="Inicio"> </p> </a>
+
+  <form class="form-horizontal" action="operaciones.php" role="form" method="POST">
+
+    <div class="input">
+      <label>Número A:</label>
+      <input type="text" class="form-control"  name="a" placeholder="Ingrese el numero A">
+    </div>
+
+    <div class="input">
+      <label>Número B:</label>
+      <input type="text" class="form-control" name="b" placeholder="Ingrese el número B">
+    </div>
+
+
+<p></p>
+
+  <b><p>Seleccione la operación que desea realizar:</p></b>
+  
+  
+   <div class="checkbox">
+  <label><input type="checkbox" name="tipo" value="suma">Suma</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" name="tipo" value="resta">Resta</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" name="tipo" value="multiplicacion">Multiplicación</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" name="tipo" value="division">División</label>
+</div>
+ 
+ <p></p>
+ <p></p>
+
+  
+
+
+<p></p>
+<p></p>
+
+    <button type="submit" name="submit" class="btn btn-default">Realizar operación</button>
+  </form>
+
+</div>
+
+<p></p>
+<p></p>
+
+</body>
+</html>

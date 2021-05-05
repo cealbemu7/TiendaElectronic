@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Reportes de Mantenimiento</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Reporte de Mantenimiento de Equipo de computo</h2>
+<a href="../index.html"> <p align=center> <img src="../imagenes/home.png" width="50" height="50" name="Inicio"> </p> </a>
+
+  <form class="form-horizontal" action="insertareporte.php" role="form" method="POST">
+
+    <div class="input">
+      <label>Nombre:</label>
+      <input type="text" class="form-control"  name="nombre" placeholder="Ingrese el nombre del equipo">
+    </div>
+
+    <div class="input">
+      <label for="inventario">Inventario:</label>
+      <input type="text" class="form-control" name="inventario" placeholder="Ingrese el número de inventario">
+    </div>
+
+    <div class="input">
+      <label for="ubicacion">Ubicacion:</label>
+      <input type="text" class="form-control" name="ubicacion" placeholder="Ingrese la ubicación del equipo">
+    </div>
+
+    <div class="input">
+      <label for="fechar">Fecha:</label>
+      <input type="date" class="form-control"  name="fechar" placeholder="Ingrese la fecha en que realizó el mantenimiento">
+    </div>
+
+<p></p>
+
+  <b><p>Seleccione el tipo de mantenimiento realizado:</p></b>
+  
+  
+   <div class="checkbox">
+  <label><input type="checkbox" name="tipo" value="Preventivo">Preventivo</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" name="tipo" value="Correctivo">Correctivo</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" name="tipo" value="Predictivo">Predictivo</label>
+</div>
+ 
+ <p></p>
+ <p></p>
+
+  <div class="input">
+      <label for="observaciones">Observaciones:</label>
+      <input type="text" class="form-control" name="observaciones" placeholder="Describa el mantenimiento realizado al equipo">
+  </div>
+
+
+
+
+
+<p></p>
+
+  <b><p>Este reporte se anexará a la hoja de vida?</p></b>
+  
+  
+     <div class="checkbox">
+  <label><input type="checkbox" name="anexo" value="Si">Si</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" name="anexo" value="No">No</label>
+</div>
+
+<p></p>
+
+<div class="input">
+      <label for="responsable">Responsable:</label>
+<p></p>
+
+      <input type="text" class="form-control" name="responsable" placeholder="Escriba el nombre del responsable">
+  </div>
+
+<p></p>
+<p></p>
+
+    <button type="submit" name="submit" class="btn btn-default">Guardar Reporte</button>
+  </form>
+</div>
+
+<p></p>
+<p></p>
+
+</body>
+</html>

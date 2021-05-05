@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Insertar datos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/flick/jquery-ui.min.css">
+  <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+
+
+</head>
+<body>
+
+
+
+
+<div class="container">
+  <h2>Insertar datos</h2>
+<a href="../index.html"> <p align=center> <img src="../imagenes/home.png" width="50" height="50" name="Inicio"> </p> </a>
+
+
+  <form class="form-horizontal" action="insertar.php" role="form" method="POST">
+
+
+    <div class="input">
+      <label>ID:</label>
+      <input type="text" class="form-control"  name="id" placeholder="Ingrese el id">
+    </div>
+
+    <div class="input">
+      <label>Nombre:</label>
+      <input type="text" class="form-control"  name="nombre" placeholder="Ingrese el nombre">
+    </div>
+
+    <div class="input">
+      <label>Apellido:</label>
+      <input type="text" class="form-control" name="apellido" placeholder="Ingrese el apellido">
+    </div>
+
+    <div class="input">
+      <label>Email:</label>
+      <input type="text" class="form-control" name="email" placeholder="Ingrese el Email">
+    </div>
+
+
+<div id="datepicker"></div>
+<div class="input">
+<div id="datos">
+    <label for='fecha'>Fecha:</label>
+    <!-- Campo de texto que recibira el valor seleccionado en el datepicker 
+    le he puesto el atributo readonly para no poder escribir directamente -->
+    <input type='text' class="form-control" name='fecha' id='fecha' readonly />
+</div>
+</div>
+
+<script>
+$( "#datepicker" ).datepicker({
+    // Formato de la fecha
+    dateFormat: "dd/mm/yy",
+    // Primer dia de la semana El lunes
+    firstDay: 1,
+    // Dias Largo en castellano
+    dayNames: [ "Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" ],
+    // Dias cortos en castellano
+    dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+    // Nombres largos de los meses en castellano
+    monthNames: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ],
+    // Nombres de los meses en formato corto 
+    monthNamesShort: [ "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dec" ],
+    // Cuando seleccionamos la fecha esta se pone en el campo Input 
+    onSelect: function(dateText) { 
+          $('#fecha').val(dateText);
+      }
+});
+</script>
+
+
+
+ 
+ <p></p>
+ <p></p>
+
+  
+
+
+<p></p>
+<p></p>
+
+    <button type="submit" name="submit" class="btn btn-default">Insertar datos</button>
+  </form>
+
+</div>
+
+<p></p>
+<p></p>
+
+</body>
+</html>
